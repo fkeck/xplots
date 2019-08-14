@@ -1,0 +1,14 @@
+Package: looplot
+Type: Package
+Title: Save Multiple Plots Stored in Columns
+Version: 0.1.0
+Author: Francois Keck
+Maintainer: Francois Keck <francois.keck@gmail.com>
+Description: Functions to easily save list of ggplots stored in list-columns in tibbles.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports:
+    dplyr,
+    purrr
