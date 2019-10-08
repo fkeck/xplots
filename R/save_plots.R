@@ -21,6 +21,8 @@
 #' must be installed manually by the user. Tested on Linux only, probably not working
 #' on Windows.
 #'
+#'
+#'
 #' @export
 #'
 save_plots <- function(.data, ...,
@@ -54,3 +56,4 @@ save_plots <- function(.data, ...,
     }
   })
 }
+
