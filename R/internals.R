@@ -7,7 +7,7 @@ flat_fac <- function(x){
 
   for(i in 1:(nrow(x))){
     for(j in 1:ncol(x)){
-      res[j + ncol(x)*(i-1)] <- paste0("/Title (", x[i,j], ")",
+      res[j + ncol(x)*(i-1)] <- paste0("/Title (", x[i, j], ")",
                                        " /Page ", i,
                                        " /OUT pdfmark")
       lvl[j + ncol(x)*(i-1)] <- j
