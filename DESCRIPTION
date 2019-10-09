@@ -1,4 +1,4 @@
-Package: xplot
+Package: xplots
 Type: Package
 Title: Save Multiple Plots Stored in Columns
 Version: 0.1.0
