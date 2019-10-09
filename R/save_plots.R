@@ -31,14 +31,15 @@ save_plots <- function(.data, ...,
 
   .data <- dplyr::arrange(.data, !!!bookmarks)
   plot_cols <- dplyr::select(.data, ...)
-  bk_dat <- dplyr::select(.data, !!!bookmarks)
 
-  bk_dat <- as.matrix(bk_dat)
+  if(!is.null(bookmarks)){
+    bk_dat <- dplyr::select(.data, !!!bookmarks)
+    bk_dat <- as.matrix(bk_dat)
+    res <- flat_fac(bk_dat)
+    bk_file <- tempfile(fileext = ".info")
+    writeLines(res, bk_file)
+  }
 
-  res <- flat_fac(bk_dat)
-
-  bk_file <- tempfile(fileext = ".info")
-  writeLines(res, bk_file)
 
   map2(plot_cols, files, function(plot_col, file){
     pdf(file, width = width, height = height)
